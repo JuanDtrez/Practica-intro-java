@@ -20,7 +20,7 @@ public class Boletin {
     
     public void imprimirBoletin(){
         for (Alumno alumno : alumnos){
-            System.out.println("-------------------------------------------------");
+            System.out.println("");
             System.out.println("Alumno: " + alumno.getNombre() +" "+ alumno.getApellido());
             System.out.println("");
             System.out.printf("Asignatura                                   Nota");
