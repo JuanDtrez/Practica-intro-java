@@ -11,22 +11,24 @@ public class Asignatura {
     }
 
     //Setter y getter para la variable nombre
-    public void Setnombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public String Getnombre(){
+    public String getNombre(){
         return nombre;
     }
 
     //Setter y getter para la variable nota
-    public void Setnota(double nota){
+    public void setNota(double nota){
         this.nota = nota;
     }
 
-    public double Getnota(){
+    public double getNota(){
         return nota;
     }
+    
+    
     
 }
 

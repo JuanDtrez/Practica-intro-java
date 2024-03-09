@@ -15,20 +15,20 @@ public class Alumno {
     }
     
     // Setter y getter para la variable nombre
-    public void Setnombre(String nombre){
+    public void setNombre(String nombre){
         this.nombre = nombre;
     }
 
-    public String Getnombre(){
+    public String getNombre(){
         return nombre;
     }
 
     // Setter y getter para la variable apellido
-    public void Setapellido(String apellido){
+    public void setApellido(String apellido){
         this.apellido = apellido;
     }
 
-    public String Getapellido(){
+    public String getApellido(){
         return apellido;
     }
 
@@ -41,7 +41,20 @@ public class Alumno {
         this.asignaturas = asignaturas;
     }
 
-    
+    public void agregarAsignatura(Asignatura asignatura){
+        asignaturas.add(asignatura);
+    }
+
+    public double calcularNotaTotal(){
+
+        double sumaNotas = 0;
+
+        for (Asignatura asignatura : asignaturas){
+            sumaNotas += asignatura.getNota();
+        }
+        return (asignaturas.size() > 0) ? sumaNotas / asignaturas.size() : 0;
+    }
+
 }  
     
 
