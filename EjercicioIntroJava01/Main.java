@@ -1,12 +1,12 @@
 package EjercicioIntroJava01;
-
+// Clase que instancia un alumno
 public class Main {
     public static void main(String[] args) {
         // Ejemplo de uso
         Boletin boletin = new Boletin();
 
         // Crear algunos alumnos y asignarles asignaturas y notas
-        Alumno alumno1 = new Alumno("Juan", "Perez");
+        Alumno alumno1 = new Alumno("Juan", "Cardona");
         alumno1.agregarAsignatura(new Asignatura("Matemáticas", 8.5));
         alumno1.agregarAsignatura(new Asignatura("Física", 7.8));
         alumno1.agregarAsignatura(new Asignatura("Historia", 9.2));
@@ -25,9 +25,18 @@ public class Main {
         alumno2.agregarAsignatura(new Asignatura("Programación", 9.3));
         alumno2.agregarAsignatura(new Asignatura("Dibujo Técnico", 8.8));
 
+        // Modificar nota de Ciencias del alimno-1 
+        alumno1.modificarNotaAsignatura("Ciencias", 8.0);
+
+        // Error en el modificardor
+        alumno1.modificarNotaAsignatura("ciencias", 8.0);
+
         // Agregar los alumnos al boletín
         boletin.agregarAlumno(alumno1);
         boletin.agregarAlumno(alumno2);
+        
+        // Eliminar el alimno-2
+        boletin.eliminarAlumno(alumno2);
 
         // Imprimir el boletín de notas
         boletin.imprimirBoletin();        

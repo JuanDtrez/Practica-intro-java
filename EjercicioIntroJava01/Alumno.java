@@ -1,7 +1,6 @@
 package EjercicioIntroJava01;
-
 import java.util.ArrayList;
-
+// Clase que define el formato de un alumno 
 public class Alumno {
     private String nombre;
     private String apellido;
@@ -41,10 +40,23 @@ public class Alumno {
         this.asignaturas = asignaturas;
     }
 
+    // Metodo para agregar una asignatura
     public void agregarAsignatura(Asignatura asignatura){
         asignaturas.add(asignatura);
     }
 
+    // Metodo para modificar una asignatura
+    public void modificarNotaAsignatura(String Asignatura, double nuevaNota){
+        for(Asignatura asignatura: asignaturas){
+            if (asignatura.getNombre().equals(Asignatura)){
+                asignatura.setNota(nuevaNota);
+                return; // Salir del medoto una vez modificada la nota, similar al (break)
+            }
+        }
+        System.out.println("La asignatura " + Asignatura + " No existe o no pertenece al alumno " + nombre +" "+ apellido);
+    }
+
+    // Metodo para calcular la media de notas
     public double calcularNotaTotal(){
 
         double sumaNotas = 0;

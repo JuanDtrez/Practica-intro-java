@@ -1,16 +1,16 @@
 package EjercicioIntroJava01;
-
+// Clase que define el formato de una asignatira
 public class Asignatura {
     private String nombre;
     private double nota;
 
-    //Cosntructor de la clase asignatura
+    // Cosntructor de la clase asignatura
     public Asignatura (String nombre, double nota){
         this.nombre = nombre;
         this.nota = nota;
     }
 
-    //Setter y getter para la variable nombre
+    // Setter y getter para la variable nombre
     public void setNombre(String nombre){
         this.nombre = nombre;
     }
@@ -19,7 +19,7 @@ public class Asignatura {
         return nombre;
     }
 
-    //Setter y getter para la variable nota
+    // Setter y getter para la variable nota
     public void setNota(double nota){
         this.nota = nota;
     }
