@@ -52,7 +52,6 @@ public class CuentaSupermercado {
         System.out.println("-----------------------------------------------");
         System.out.printf("Total: %.2f\n", calcularTotal());
     }
-    
 }
 
 
